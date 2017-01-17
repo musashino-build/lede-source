@@ -11,6 +11,18 @@
 	chosen {
 		bootargs = "console=ttyS1,57600";
 	};
+
+	gpio-keys-polled {
+		compatible = "gpio-keys-polled";
+		#address-cells = <1>;
+		#size-cells = <0>;
+		poll-interval = <20>;
+		reset {
+			label = "reset";
+			gpios = <&gpio0 10 1>;
+			linux,code = <0x198>;
+		};
+	};
 };
 
 &uart {
@@ -22,7 +34,7 @@
 &pinctrl {
 	state_default: pinctrl0 {
 		gpio {
-			ralink,group = "jtag";
+			ralink,group = "jtag", "uartf";
 			ralink,function = "gpio";
 		};
 	};
