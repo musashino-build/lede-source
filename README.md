@@ -2,6 +2,7 @@ LEDE-Source
 ====
 
 LEDE-Project Source codes.
+Please refer to the wiki page in this repository for detailed explanation(Japanese only).
 
 ## Description
 LEDE-Project source codes forked by musashino_205. And I modified some of the soucecode for the following routers.
