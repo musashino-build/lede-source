@@ -17,6 +17,8 @@
 enum ath79_mach_type {
 	ATH79_MACH_GENERIC_OF = -1,	/* Device tree board */
 	ATH79_MACH_GENERIC = 0,
+	ATH79_MACH_A40,				/* OpenMesh A40 */
+	ATH79_MACH_A60,				/* OpenMesh A60 */
 	ATH79_MACH_ALFA_AP120C,			/* ALFA Network AP120C board */
 	ATH79_MACH_ALFA_AP96,			/* ALFA Network AP96 board */
 	ATH79_MACH_ALFA_NX,			/* ALFA Network N2/N5 board */
@@ -128,9 +130,11 @@ enum ath79_mach_type {
 	ATH79_MACH_NBG6716,			/* Zyxel NBG6716 */
 	ATH79_MACH_OM2P,			/* OpenMesh OM2P */
 	ATH79_MACH_OM2Pv2,			/* OpenMesh OM2Pv2 */
+	ATH79_MACH_OM2Pv4,			/* OpenMesh OM2Pv4 */
 	ATH79_MACH_OM2P_HS,			/* OpenMesh OM2P-HS */
 	ATH79_MACH_OM2P_HSv2,			/* OpenMesh OM2P-HSv2 */
 	ATH79_MACH_OM2P_HSv3,			/* OpenMesh OM2P-HSv3 */
+	ATH79_MACH_OM2P_HSv4,			/* OpenMesh OM2P-HSv4 */
 	ATH79_MACH_OM2P_LC,			/* OpenMesh OM2P-LC */
 	ATH79_MACH_OM5P,			/* OpenMesh OM5P */
 	ATH79_MACH_OM5P_AC,			/* OpenMesh OM5P-AC */
