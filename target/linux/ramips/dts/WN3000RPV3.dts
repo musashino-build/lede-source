@@ -1,12 +1,4 @@
-/*
- * Device Tree file for the Netgear EX2700
- *
- * Copyright (C) 2016 Joseph C. Lehner <joseph.c.lehner@gmail.com>
- *
- * This file is licensed under the terms of the GNU General Public
- * License version 2.  This program is licensed "as is" without any
- * warranty of any kind, whether express or implied.
- */
+/* This file is released into the public domain */
 
 /dts-v1/;
 
@@ -17,7 +9,7 @@
 
 / {
 	compatible = "ralink,mt7620a-soc";
-	model = "Netgear EX2700";
+	model = "Netgear WN3000RPv3";
 
 	chosen {
 		bootargs = "console=ttyS0,57600";
@@ -27,39 +19,49 @@
 		compatible = "gpio-leds";
 
 		power_g {
-			label = "ex2700:green:power";
+			label = "wn3000rpv3:green:power";
 			gpios = <&gpio0 9 GPIO_ACTIVE_LOW>;
 			default-state = "on";
 		};
 
 		power_r {
-			label = "ex2700:red:power";
+			label = "wn3000rpv3:red:power";
 			gpios = <&gpio0 11 GPIO_ACTIVE_LOW>;
 		};
 
-		device_g {
-			label = "ex2700:green:device";
+		client_g {
+			label = "wn3000rpv3:green:client";
 			gpios = <&gpio0 13 GPIO_ACTIVE_LOW>;
 		};
 
-		device_r {
-			label = "ex2700:red:device";
+		client_r {
+			label = "wn3000rpv3:red:client";
 			gpios = <&gpio0 10 GPIO_ACTIVE_LOW>;
 		};
 
 		router_g {
-			label = "ex2700:green:router";
+			label = "wn3000rpv3:green:router";
 			gpios = <&gpio0 12 GPIO_ACTIVE_LOW>;
 		};
 
 		router_r {
-			label = "ex2700:red:router";
+			label = "wn3000rpv3:red:router";
 			gpios = <&gpio0 14 GPIO_ACTIVE_LOW>;
 		};
 
 		wps {
-			label = "ex2700:green:wps";
+			label = "wn3000rpv3:green:wps";
 			gpios = <&gpio1 15 GPIO_ACTIVE_LOW>;
+		};
+
+		l_arrow {
+			label = "wn3000rpv3:blue:leftarrow";
+			gpios = <&gpio0 7 GPIO_ACTIVE_LOW>;
+		};
+
+		r_arrow {
+			label = "wn3000rpv3:blue:rightarrow";
+			gpios = <&gpio0 8 GPIO_ACTIVE_LOW>;
 		};
 	};
 
@@ -81,10 +83,6 @@
 			linux,code = <KEY_WPS_BUTTON>;
 		};
 	};
-};
-
-&gpio0 {
-	status = "okay";
 };
 
 &gpio1 {
@@ -115,12 +113,12 @@
 
 		partition@40000 {
 			label = "firmware";
-			reg = <0x40000 0x3b0000>;
+			reg = <0x40000 0x7b0000>;
 		};
 
-		art: partition@3f0000 {
+		art: partition@7f0000 {
 			label = "art";
-			reg = <0x3f0000 0x10000>;
+			reg = <0x7f0000 0x10000>;
 			read-only;
 		};
 	};

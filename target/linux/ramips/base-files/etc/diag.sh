@@ -53,7 +53,8 @@ get_status_led() {
 	jhr-n825r|\
 	mpr-a1|\
 	mpr-a2|\
-	mzk-ex750np)
+	mzk-ex750np|\
+	wn3000rpv3)
 		status_led="$board:red:power"
 		;;
 	ac1200pro|\
@@ -107,6 +108,7 @@ get_status_led() {
 	w502u)
 		status_led="$board:blue:wps"
 		;;
+	d240|\
 	dap-1350|\
 	na930|\
 	pbr-m1|\
