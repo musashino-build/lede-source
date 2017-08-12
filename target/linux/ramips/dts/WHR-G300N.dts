@@ -1,4 +1,4 @@
-	/dts-v1/;
+/dts-v1/;
 
 #include "rt3050.dtsi"
 
@@ -42,6 +42,7 @@
 		partition@3f0000 {
 			label = "user";
 			reg = <0x3f0000 0x10000>;
+			read-only;
 		};
 	};
 
@@ -109,8 +110,6 @@
 	mediatek,portmap = <0x2f>;
 };
 
-/* FIXED: no partitions defined */
 &wmac {
 	ralink,mtd-eeprom = <&factory 0>;
 };
-
